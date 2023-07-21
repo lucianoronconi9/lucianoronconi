@@ -1,0 +1,22 @@
+p {
+    font-family: Arial;
+    font-size: 15px;
+}
+
+li {
+    font-family:'Times New Roman';
+    font-size: 15px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+#contacto, #cabecera{
+    background-color: beige;
+    box-shadow: 5px 5px 5px grey;
+}
+
+button{
+    border-radius: 5px;
+}
