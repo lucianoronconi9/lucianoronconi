@@ -1,0 +1,16 @@
+.row {
+    height: 15rem;
+    padding-top: 1rem;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 10%;
+}
+
+.container{
+    background-color: antiquewhite;
+}
