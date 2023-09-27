@@ -1,6 +1,5 @@
 function obtenerTransporteAdecuado(distancia){
     let transporte = "avion"
-    console.log(distancia)
 
     switch(true){
         case (distancia > 0 && distancia <= 1000):
