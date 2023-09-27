@@ -1,0 +1,43 @@
+body{
+    margin: 5px auto;
+    text-align: center;
+}
+
+
+.divEjercicio{
+    border-bottom: solid 1px black;
+}
+
+.cuadrado{
+    border: solid 1px black;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuadrado1{
+    background-color: blue;
+}
+
+.cuadrado2{
+    background-color: green;
+}
+
+.cuadrado3{
+    background-color: red;
+}
+
+.contentCuadrados{
+    display: inline-flex;
+    flex-direction: row-reverse;
+    
+	align-items: center;
+	height: 300px;
+    width: auto;
+    border: solid 1px black;
+    margin: 5px;
+    background-color: aliceblue;
+}
