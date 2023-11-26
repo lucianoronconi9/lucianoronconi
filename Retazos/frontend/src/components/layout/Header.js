@@ -5,8 +5,7 @@ const Header = (props) => {
     return (
         <header>
             <div className='holder'>
-                <img src='img/Header.jpg' width='100' alt='Retazos'></img>
-                <h1>Retazos</h1>
+                <img src='img/Header.jpg' width='150' alt='Retazos'></img>
             </div>
         </header>
     );

@@ -6,12 +6,27 @@ const ProductosPage = (props) => {
     return (
         <main className='holder'>
              <div class="productos" >
-                <img src="img/Home/Retazos-index.jpg" alt="" />
-                <img src="img/Home/Retazos-index.jpg" alt="" />
-                <img src="img/Home/Retazos-index.jpg" alt="" />
-                <img src="img/Home/Retazos-index.jpg" alt="" />
-                <img src="img/Home/Retazos-index.jpg" alt="" />
-                <img src="img/Home/Retazos-index.jpg" alt="" />
+                <div className='contenedor'>
+                    <img src="img/productos/telas.jpg" alt="" />
+                </div>
+                <div className='contenedor'>
+                    <img src="img/productos/telas1.png" alt="" />
+                </div>
+                <div className='contenedor'>
+                    <img src="img/productos/telas2.jpg" alt="" />
+                </div>
+                <div className='contenedor'>
+                    <img src="img/productos/telas3.jpg" alt="" />
+                </div>
+                <div className='contenedor'>
+                    <img src="img/productos/telas4.jpg" alt="" />
+                </div>
+                <div className='contenedor'>
+                    <img src="img/productos/telas5.jpg" alt="" />
+                </div>
+                <div className='contenedor'>
+                    <img src="img/productos/telas6.jpg" alt="" />
+                </div>
             </div>
         </main>
     );

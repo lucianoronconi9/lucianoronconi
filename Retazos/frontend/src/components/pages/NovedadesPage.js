@@ -16,11 +16,6 @@ const NovedadesPage = (props) => {
                 <h4>Subtitulo</h4>
                 <p>Cuerpo</p>
             </section>
-            <section className='novedadesSection' >
-                <h3>Titulo</h3>
-                <h4>Subtitulo</h4>
-                <p>Cuerpo</p>
-            </section>
         </div>
     );
 }
