@@ -1,0 +1,32 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h2 {
+  color:#43AA61;
+  font-weight: 400;
+  opacity: .9;
+}
+
+h3 {
+  color:#43AA61;
+  font-weight: 200;
+  opacity: .8;
+}
+
+p {
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+.holder {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.imgHeader {
+  width: 25%;
+}
+
