@@ -1,0 +1,130 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 60px;
+    margin: 0;
+    background-color:#eee;
+  }
+
+header {
+    background-color: #43AA61;
+    padding: 16px 0;
+  }
+  
+  header h1 {
+    color: black;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+  }
+
+  footer {
+    background-color: #43AA61;
+    clear: both;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+  }  
+
+  h2 {
+    color:#43AA61;
+    font-weight: 400;
+    opacity: .9;
+  }
+  
+  h3 {
+    color:#43AA61;
+    font-weight: 200;
+    opacity: .8;
+  }
+
+  p {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+  }
+  
+  .holder {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .imgHeader {
+    width: 20%;
+  }
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.productos img {
+    width: 18%;
+    border: 1px solid #ddd;
+    padding: 0.3em;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-right: 2%;
+}
+
+.contacto {
+    display: flex;
+    gap: 24px;
+}
+
+.contacto div {
+    width: 100%;
+}
+
+.datos ul li {
+    font-size: 13px;
+}
+
+.formulario p {
+    display: flex;
+}
+
+.formulario p label {
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.formulario p:nth-child(4) {
+    align-items: start;
+}
+
+.formulario textarea {
+    resize: none;
+    height: 150px;
+}
+
+.formulario input[type="submit"] {
+    background: #6da9ed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    color: white;
+    font-size: 16px;
+    padding: 6px 20px;
+    width: auto;
+    position: relative;
+    left: 5rem;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #2e64;
+}
