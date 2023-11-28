@@ -4,12 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
+var cors = require('cors');
 
 require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
+var apiRouter = require('./routes/api');
 
 var app = express();
 
@@ -45,6 +47,7 @@ secured = async (req, res, next) => {
 app.use('/', indexRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured ,adminRouter);
+app.use('/api', cors(), apiRouter);
 
 
 // catch 404 and forward to error handler
