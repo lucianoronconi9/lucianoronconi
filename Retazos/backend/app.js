@@ -10,7 +10,7 @@ require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/admin/login');
-var adminRouter = require('./routes/admin/novedades');
+var novedadesRouter = require('./routes/novedades/novedades');
 var apiRouter = require('./routes/api');
 
 var app = express();
@@ -46,7 +46,7 @@ secured = async (req, res, next) => {
 
 app.use('/', indexRouter);
 app.use('/admin/login', loginRouter);
-app.use('/admin/novedades', secured ,adminRouter);
+app.use('/novedades/novedades', secured ,novedadesRouter);
 app.use('/api', cors(), apiRouter);
 
 

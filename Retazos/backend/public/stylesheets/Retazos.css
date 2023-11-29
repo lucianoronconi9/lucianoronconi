@@ -128,3 +128,27 @@ header {
 .formulario input[type="submit"]:hover {
     background-color: #2e64;
 }
+
+
+.btn-primary, .btn-primary:active, .btn-primary:visited, .btn-primary:hover,
+.btn-secondary, .btn-secondary:active, .btn-secondary:visited, .btn-secondary:hover {
+  background-color: #43AA61;
+  border: #43AA61;
+}
+
+.btn-primary:active, .btn-primary:visited, .btn-primary:hover,
+.btn-secondary:active, .btn-secondary:visited, .btn-secondary:hover {
+  opacity: 0.7;
+}
+
+.btn-secondary, .btn-secondary:active, .btn-secondary:visited, .btn-secondary:hover{
+  
+}
+
+
+.customCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+}

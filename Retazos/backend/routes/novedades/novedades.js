@@ -7,8 +7,8 @@ router.get('/', async function(req, res, next) {
 
     var novedades = await novedadesModel.getNovedades();
 
-    res.render('admin/novedades', {
-                layout: 'admin/layout',
+    res.render('novedades/novedades', {
+                layout: 'novedades/layout',
                 persona: req.session.nombre,
                 novedades
             });
@@ -16,8 +16,8 @@ router.get('/', async function(req, res, next) {
 
 router.get('/agregar', async function(req, res, next) {
 
-    res.render('admin/agregar', {
-                layout: 'admin/layout'
+    res.render('novedades/agregar', {
+                layout: 'novedades/layout'
             });
 });
 
@@ -26,10 +26,10 @@ router.post('/agregar', async function(req, res, next) {
     try {
         if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
             await novedadesModel.insertarNovedad(req.body);
-            res.redirect('/admin/novedades');
+            res.redirect('/novedades/novedades');
         } else {
-            res.render('admin/agregar', {
-                layout: 'admin/layout',
+            res.render('novedades/agregar', {
+                layout: 'novedades/layout',
                 error: true,
                 message: "Todos los campos son requeridos"
             });
@@ -38,8 +38,8 @@ router.post('/agregar', async function(req, res, next) {
     } catch (exception) {
         console.log(exception);
 
-        res.render('admin/agregar', {
-            layout: 'admin/layout',
+        res.render('novedades/agregar', {
+            layout: 'novedades/layout',
             error: true,
             message: "No se pudo guardar la novedad"
         });
@@ -52,7 +52,7 @@ router.get('/eliminar/:id', async function(req, res, next) {
     var id = req.params.id;
 
     await novedadesModel.eliminarNovedad(id);
-    res.redirect('/admin/novedades');
+    res.redirect('/novedades/novedades');
 });
 
 router.get('/modificar/:id', async function(req, res, next) {
@@ -60,8 +60,8 @@ router.get('/modificar/:id', async function(req, res, next) {
     
     var novedad = await novedadesModel.getNovedadById(id);
 
-    res.render('admin/modificar', {
-            layout: 'admin/layout',
+    res.render('novedades/modificar', {
+            layout: 'novedades/layout',
             novedad
         });
 });
@@ -77,13 +77,13 @@ router.post('/modificar', async function(req, res, next) {
         }
 
         await novedadesModel.modificarNovedad(obj, req.body.id);
-        res.redirect('/admin/novedades');
+        res.redirect('/novedades/novedades');
 
     } catch (exception) {
         console.log(exception);
 
-        res.render('admin/modificar', {
-            layout: 'admin/layout',
+        res.render('novedades/modificar', {
+            layout: 'novedades/layout',
             error: true,
             message: "No se pudo actualizar la novedad"
         });
