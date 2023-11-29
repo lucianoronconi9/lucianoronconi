@@ -70,14 +70,24 @@ router.post('/modificar', async function(req, res, next) {
 
     try {
 
-        var obj = {
-            titulo : req.body.titulo,
-            subtitulo : req.body.subtitulo,
-            cuerpo : req.body.cuerpo
-        }
+        if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
 
-        await novedadesModel.modificarNovedad(obj, req.body.id);
-        res.redirect('/novedades/novedades');
+            var obj = {
+                titulo : req.body.titulo,
+                subtitulo : req.body.subtitulo,
+                cuerpo : req.body.cuerpo
+            }
+            
+            await novedadesModel.modificarNovedad(obj, req.body.id);
+            res.redirect('/novedades/novedades');
+            
+        } else {
+            res.render('novedades/agregar', {
+                layout: 'novedades/layout',
+                error: true,
+                message: "Todos los campos son requeridos"
+            });
+        }
 
     } catch (exception) {
         console.log(exception);

@@ -1,20 +1,24 @@
-<div class="row">
+<div class="container" style="margin-top: 15px;">
     <div class="col-6 offset-3">
-        <h3>Modificar la novedad</h3>
+        <h3 class="text-center">Modificar la novedad</h3>
         <form action="/novedades/novedades/modificar" method="post">
             <input type="hidden" value="{{novedad.id}}" name="id">
-            <div class="form-group">
+            <div class="mb-3 row form-group">
                 <label for="">Titulo</label>
-                <input type="text" class="form-control" name="titulo" value={{novedad.titulo}}>
+                <textarea type="text" class="form-control" style="min-height: 50px;" name="titulo">{{novedad.titulo}}</textarea>
             </div>
-            <div class="form-group">
+            <div class="mb-3 row form-group">
                 <label for="">SubTitulo</label>
                 <textarea type="text" class="form-control" name="subtitulo">{{novedad.subtitulo}}</textarea>
-            </div><div class="form-group">
-                <label for="">Cuerpo</label>
-                <textarea type="text" class="form-control" name="cuerpo">{{novedad.cuerpo}}</textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Modificar</button>
+            <div class="mb-3 row form-group">
+                <label for="">Cuerpo</label>
+                <textarea type="text" class="form-control" style="min-height: 100px;" name="cuerpo">{{novedad.cuerpo}}</textarea>
+            </div>
+                <div class="mb-3 row">
+                <input type="button" class="btn btn-primary col-4" value="Volver" style="margin-left: 2px" onclick="history.back()">
+                <button type="submit" class="btn btn-primary col-4" style="margin-left: 160px">Modificar</button>
+            </div>
         </form>
         {{#if error}}
             <h5>{{ message }}</h5>

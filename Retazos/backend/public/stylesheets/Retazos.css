@@ -141,10 +141,9 @@ header {
   opacity: 0.7;
 }
 
-.btn-secondary, .btn-secondary:active, .btn-secondary:visited, .btn-secondary:hover{
-  
+.customContainer {
+  margin-top:100px;
 }
-
 
 .customCenter {
   display: flex;
